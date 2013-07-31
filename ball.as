@@ -1,6 +1,6 @@
 package
 {
-  import flash.display.Sprite;
+	import flash.display.Sprite;
 	import flash.events.Event;
 	public class ball extends Sprite
 	{
@@ -23,12 +23,12 @@ package
 			//setup velocity
 			velocity = {};
 			velocity.x = Math.random() * 5;
-			velocity.y = 20;
+			velocity.y = 10;
 			
 			//setup acceleration
 			acceleration = new Object();
 			acceleration.x = 0;
-			acceleration.y = 1;
+			acceleration.y = .1;
 			
 			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
