@@ -3,7 +3,7 @@
 
 package
 {
-  import flash.display.Sprite;
+	import flash.display.Sprite;
 	
 	public class MainProject2 extends Sprite
 	{
@@ -17,17 +17,23 @@ package
 			var p:paddle = new paddle();
 			this.addChild(p);
 			
+			var brickRow:int=0;
+			var brickCol:int=0;
 		
-			for(var i:Number = 6; i >= 0; i--) {
-				for(var h:Number = 0; h < i + 1; h++) {
+			for(var i:Number = 3; i >= 0; i--) {
+				for(var h:Number = 6; h >= 0; h--) {
 					
 					var br:bricks = new bricks();
-					br.x = 50 + (i-brickRow*7)*50;
+					br.x = 50 * brickCol;
 					
-					br.y = 10 + brickRow*20;
+					br.y = 30 * brickRow;
 					
 					this.addChild(br);
+					
+					brickCol++;
 				}
+				brickRow++;
+				brickCol=0
 			}
 			
 			
