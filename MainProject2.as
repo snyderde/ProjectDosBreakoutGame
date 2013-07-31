@@ -38,7 +38,7 @@ package
 				//make sure paddle exists
 				if(this.b) {
 					if( this.b.hitTestObject(this.p) ) {
-						this.b.velocity.y;
+						this.b.velocity.y *= -1;
 					}	
 				}
 					
