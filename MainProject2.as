@@ -17,7 +17,7 @@ package
 			var brickCol:int=0;
 			
 		
-			for(var i:Number = 3; i >= 0; i--) {
+			for(var i:Number = 2; i >= 0; i--) {
 				for(var h:Number = 6; h >= 0; h--) {
 					
 					var br:bricks = new bricks();
