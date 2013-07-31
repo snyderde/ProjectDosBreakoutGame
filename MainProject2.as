@@ -1,24 +1,21 @@
-//this is for the MainProject2.as
-
-
 package
 {
 	import flash.display.Sprite;
-	
+	import flash.events.Event;
 	public class MainProject2 extends Sprite
 	{
-		private var brickRow:int;
-		private var brickRow2:int;
+		public var p:paddle = new paddle();
+		public var b:ball = new ball(1)
+		
 		public function MainProject2()
 		{
-			var b:ball = new ball(1);
+			this.addEventListener(Event.ENTER_FRAME, onE);			
 			this.addChild(b);
-			
-			var p:paddle = new paddle();
 			this.addChild(p);
 			
 			var brickRow:int=0;
 			var brickCol:int=0;
+			
 		
 			for(var i:Number = 3; i >= 0; i--) {
 				for(var h:Number = 6; h >= 0; h--) {
@@ -35,11 +32,17 @@ package
 				brickRow++;
 				brickCol=0
 			}
-			
-			
-			
-			
-			
 		}
+			private function onE(e:Event):void {
+				
+				//make sure paddle exists
+				if(this.b) {
+					if( this.b.hitTestObject(this.p) ) {
+						this.b.velocity.y;
+					}	
+				}
+					
+		}
+		
 	}
 }
