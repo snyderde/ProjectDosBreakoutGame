@@ -1,4 +1,3 @@
-		
 package
 {
 	import flash.display.Sprite;
@@ -52,3 +51,4 @@ package
 		
 	}
 	}
+
