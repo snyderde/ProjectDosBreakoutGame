@@ -10,3 +10,16 @@ and the second row of bricks get hit twice and disappear and the third row of br
 three times.
 
 the ball must bounce off the paddle which is controlled by the left and right arrow keys.
+
+
+
+  private function onE(e:Event):void {
+
+//make sure paddle exists
+if(this.b) {
+//check to see if we are hitting paddle
+if( this.b.hitTestObject(this.p) ) {
+//txtFeedback.text = "they are hitting";
+this.velocity *= -1;
+}	
+}
