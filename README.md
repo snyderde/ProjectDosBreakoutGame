@@ -1,7 +1,7 @@
 ProjectDosBreakoutGame
 ======================
 
-breakout game
+breakout game//  this is for the class paddle.as
 package
 {
   import flash.display.Sprite;
