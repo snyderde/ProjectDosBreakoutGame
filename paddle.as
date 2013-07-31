@@ -1,14 +1,14 @@
+		
 package
 {
-  import flash.display.Sprite;
+	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
 	public class paddle extends Sprite
 	{
 		
 		private var velocity:Number;
-		public var bally:ball;
-		public var paddy:paddle;
+		
 		public function paddle()
 		{
 			super();
@@ -47,14 +47,8 @@ package
 		private function onE(e:Event):void {
 			
 				//make sure paddle exists
-				if(this.bally) {
-					//check to see if we are hitting paddle
-					if( this.bally.hitTestObject(this.paddy) ) {
-						//txtFeedback.text = "they are hitting";
-						this.velocity *= -1;
-					}	
+				
 		}
 		
 	}
 	}
-}
